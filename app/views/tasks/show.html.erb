@@ -1,0 +1,9 @@
+<h1 class="display-1 m-5"><%= @task.title %></h1>
+
+<blockquote class="blockquote bg-light p-4 m-5"><%= @task.details %></blockquote>
+<div class="form-check p-4 ms-5">
+  <input class="form-check-input" type="checkbox" value="" <%= @task.checked %>> <%= @task.message %>
+</div>
+
+<%= link_to "Return to index", tasks_path(), class:"btn btn-primary mt-3 ms-5" %>
+<%= link_to "Edit task", edit_task_path(@task), class: "btn btn-primary mt-3" %>
